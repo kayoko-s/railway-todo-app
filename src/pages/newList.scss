@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+$primary-bg-color: #242f9b;
+$primary-text-color: #ffffff;
+$input-font-color: #555555;
+$button-width: 80px;
+$button-height: 40px;
+$border-radius: 5px;
+$margin-bottom: 25px;
+
+.new-list {
+  width: 100%;
+  margin: 0 auto;
+
+  .new-list-form {
+    color: $input-font-color;
+  }
+
+  .new-list-title {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: $margin-bottom;
+  }
+
+  .new-list-button {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+    width: $button-width;
+    height: $button-height;
+    border-radius: $border-radius;
+    display: inline-block; // ボタンがインラインで表示されるように
+    text-align: center; // ボタン内のテキストを中央揃えに
+  }
+}
+
+// メディアクエリでレスポンシブ対応
+@media (max-width: 768px) {
+  .new-list-title {
+    max-width: 100%;
+  }
+
+  .new-list-button {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .new-list-title {
+    font-size: 0.9em;
+  }
+
+  .new-list-button {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}

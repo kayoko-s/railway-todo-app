@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+$primary-bg-color: #242f9b;
+$primary-text-color: #ffffff;
+$error-color: #ff3333;
+$input-font-color: #555555;
+$button-width: 80px;
+$button-height: 40px;
+$button-border-radius: 5px;
+$margin-bottom: 25px;
+
+.edit-list {
+  width: 100%;
+  margin: 0 auto;
+
+  .edit-list-form {
+    color: $input-font-color;
+  }
+
+  .edit-list-title {
+    width: 100%;
+    max-width: 300px; // 最大はばを指定してサイズ調整
+    margin-bottom: $margin-bottom;
+  }
+
+  .delete-list-button {
+    color: $error-color;
+    border: solid 1px $error-color;
+    width: $button-width;
+    height: $button-height;
+    margin: $margin-bottom 5px;
+    border-radius: $button-border-radius;
+  }
+
+  .edit-list-button {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+    width: $button-width;
+    height: $button-height;
+    border-radius: $button-border-radius;
+  }
+}
+
+.error-message {
+  color: $error-color;
+}
+
+// メディアクエリでレスポンシブ対応
+@media (max-width: 768px) {
+  .edit-list-title {
+    width: 100%;
+  }
+
+  .delete-list-button,
+  .edit-list-button {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .edit-list-title {
+    font-size: 0.9ex;
+  }
+
+  .delete-list-button,
+  .edit-list-button {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}

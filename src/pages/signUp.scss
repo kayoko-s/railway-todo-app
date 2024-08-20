@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+$primary-bg-color: #242f9b;
+$primary-text-color: #ffffff;
+$input-font-color: #555555;
+$error-color: #ff3333;
+$input-height: 30px;
+$button-width: 100px;
+$button-height: 40px;
+$border-radius: 5px;
+$margin-bottom: 25px;
+
+.signup {
+  width: 500px;
+  margin: 0 auto;
+
+  .signup-form {
+    margin: 25px 0;
+    color: $input-font-color;
+  }
+
+  .email-input,
+  .name-input,
+  .password-input {
+    width: 100%;
+    font-size: large;
+    height: $input-height;
+    margin-bottom: $margin-bottom;
+  }
+
+  .signup-button {
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+    width: $button-width;
+    height: $button-height;
+    border-radius: $border-radius;
+    display: inline-block;
+    text-align: center;
+    line-height: $button-height;
+  }
+}
+
+.error-message {
+  color: $error-color;
+}
+
+// メディアクエリでレスポンシブ対応
+@media (max-width: 768px) {
+  .signup {
+    width: 100px;
+    padding: 0 20px;
+  }
+
+  .email-input,
+  .name-input,
+  .password-input {
+    font-size: medium;
+  }
+
+  .signup-button {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .email-input,
+  .name-input,
+  .password-input {
+    font-size: small;
+  }
+
+  .signup-button {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
